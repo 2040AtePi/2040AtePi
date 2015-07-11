@@ -88,13 +88,6 @@
 </table>
 
 <h3>
-<a id="hardware" class="anchor" href="#hardware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware</h3>
-
-<p>Connect the Raspberry Pi to an HDMI display. </p>
-
-<p>Our configuration uses a <a href="http://www.adafruit.com/products/480">joystick</a> and two buttons for Reset and AI mode (see below). The GPIO pins used can be changed easily in <code>button.s</code>.</p>
-
-<h3>
 <a id="artificial-intelligence" class="anchor" href="#artificial-intelligence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Artificial Intelligence</h3>
 
 <p>The game includes an Artificial Intelligence mode, which is toggle-able by one of the GPIO pins.</p>
@@ -117,6 +110,15 @@
 <li><p>Do step 2. for Move left, Move down and Move right calculating the average score obtained for each direction.</p></li>
 <li>Move the original board in the direction with the highest average score. The score calculation mentioned in the algorithm is a slightly modified from the original game. In our version, when two tiles merge, we add the sum of their values to the score.</li>
 </ol>
+
+<h3>
+<a id="hardware" class="anchor" href="#hardware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware</h3>
+
+<p>Connect the Raspberry Pi to an HDMI display. </p>
+
+<p>Our configuration uses a <a href="http://www.adafruit.com/products/480">joystick</a> and two buttons for Reset and AI mode (see below). The GPIO pins used can be changed easily in <code>button.s</code>.</p>
+
+<p><img src="http://i.imgur.com/8gTY0Cb.png%20=250x" alt="Circuit"></p>
 
 <h3>
 <a id="improvement" class="anchor" href="#improvement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Improvement</h3>
