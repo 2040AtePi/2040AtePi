@@ -36,7 +36,7 @@ Connect the Raspberry Pi to an HDMI display.
 
 Our configuration uses a [joystick][1] and two buttons for Reset and AI mode (see below). The GPIO pins used can be changed easily in `button.s`.
 
-![Circuit](http://i.imgur.com/8gTY0Cb.png =400x)
+![Circuit](http://i.imgur.com/8gTY0Cb.png =250x)
 
 ###Artificial Intelligence
 The game includes an Artificial Intelligence mode, which is toggle-able by one of the GPIO pins.
