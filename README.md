@@ -65,11 +65,11 @@ All you need to do is put black and white png images in the `images/` directory 
 Note that the size of the images has to be 150x150 pixels and their names have to be of the form <number>.png where number is a power of 2 between 2 and 131072.
 
 ###Thanks to
-Imperial College London and Raspberry Pi for Best ARM Final Year Project Prize (Year 1)
+Imperial College London and Raspberry Pi for Best ARM Final Year Project Prize (Year 1).
 
-Cambridge University for providing a Raspberry Pi Graphics [tutorial][4]
+Cambridge University for providing a Raspberry Pi Graphics [tutorial][4].
 
-Uddhav Vaghela, Paul Balaji, Amin Karamlou
+Uddhav Vaghela, Paul Balaji, Amin Karamlou.
 
 ###Contributing
 Franklin Schrans, Jacek Burys, Saurav Mitra, Srikrishna Subrahmanyam
