@@ -80,7 +80,7 @@ Cambridge University for providing a Raspberry Pi Graphics [tutorial][4].
 Uddhav Vaghela, Paul Balaji, Amin Karamlou.
 
 ###Contributing
-Franklin Schrans, Jacek Burys, Saurav Mitra, Srikrishna Subrahmanyam
+[Franklin Schrans][5], [Jacek Burys][6], Saurav Mitra, Srikrishna Subrahmanyam
 
 ###Disclaimer
 This project is protected under the [MIT License][3].
@@ -89,3 +89,5 @@ This project is protected under the [MIT License][3].
 [2]:https://launchpad.net/gcc-arm-embedded
 [3]:LICENSE
 [4]:https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/
+[5]:https://uk.linkedin.com/in/franklinschrans
+[6]:https://www.linkedin.com/pub/jacek-burys/97/9b0/a35/en
