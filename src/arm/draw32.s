@@ -1,0 +1,378 @@
+.section .data
+.align 4
+.globl Draw32Info
+Draw32Info:
+.int 318
+.int 52
+.int 87
+.int 88
+.int 53
+.int 24
+.int 64
+.int 53
+.int 87
+.int 120
+.int 54
+.int 24
+.int 64
+.int 54
+.int 87
+.int 120
+.int 55
+.int 24
+.int 64
+.int 55
+.int 87
+.int 120
+.int 56
+.int 24
+.int 64
+.int 56
+.int 87
+.int 120
+.int 57
+.int 24
+.int 64
+.int 57
+.int 87
+.int 120
+.int 58
+.int 24
+.int 69
+.int 58
+.int 81
+.int 126
+.int 59
+.int 24
+.int 69
+.int 59
+.int 81
+.int 126
+.int 60
+.int 24
+.int 69
+.int 60
+.int 81
+.int 126
+.int 61
+.int 24
+.int 69
+.int 61
+.int 81
+.int 126
+.int 62
+.int 24
+.int 69
+.int 62
+.int 81
+.int 126
+.int 63
+.int 24
+.int 69
+.int 63
+.int 81
+.int 126
+.int 64
+.int 24
+.int 69
+.int 64
+.int 81
+.int 92
+.int 64
+.int 103
+.int 126
+.int 65
+.int 24
+.int 69
+.int 65
+.int 81
+.int 92
+.int 65
+.int 103
+.int 126
+.int 66
+.int 24
+.int 69
+.int 66
+.int 81
+.int 92
+.int 66
+.int 103
+.int 126
+.int 67
+.int 24
+.int 69
+.int 67
+.int 81
+.int 92
+.int 67
+.int 103
+.int 126
+.int 68
+.int 24
+.int 69
+.int 68
+.int 81
+.int 92
+.int 68
+.int 103
+.int 126
+.int 69
+.int 52
+.int 69
+.int 69
+.int 103
+.int 126
+.int 70
+.int 53
+.int 69
+.int 70
+.int 103
+.int 126
+.int 71
+.int 53
+.int 69
+.int 71
+.int 103
+.int 126
+.int 72
+.int 53
+.int 69
+.int 72
+.int 103
+.int 126
+.int 73
+.int 53
+.int 69
+.int 73
+.int 103
+.int 126
+.int 74
+.int 52
+.int 69
+.int 74
+.int 103
+.int 126
+.int 75
+.int 36
+.int 69
+.int 75
+.int 98
+.int 120
+.int 76
+.int 36
+.int 69
+.int 76
+.int 98
+.int 120
+.int 77
+.int 36
+.int 69
+.int 77
+.int 98
+.int 120
+.int 78
+.int 36
+.int 69
+.int 78
+.int 98
+.int 120
+.int 79
+.int 35
+.int 69
+.int 79
+.int 98
+.int 120
+.int 80
+.int 36
+.int 69
+.int 80
+.int 98
+.int 120
+.int 81
+.int 52
+.int 69
+.int 81
+.int 92
+.int 115
+.int 82
+.int 53
+.int 69
+.int 82
+.int 92
+.int 115
+.int 83
+.int 53
+.int 69
+.int 83
+.int 92
+.int 115
+.int 84
+.int 53
+.int 69
+.int 84
+.int 92
+.int 115
+.int 85
+.int 53
+.int 69
+.int 85
+.int 92
+.int 115
+.int 86
+.int 52
+.int 69
+.int 86
+.int 91
+.int 109
+.int 87
+.int 24
+.int 69
+.int 87
+.int 87
+.int 109
+.int 88
+.int 24
+.int 69
+.int 88
+.int 87
+.int 109
+.int 89
+.int 24
+.int 69
+.int 89
+.int 87
+.int 109
+.int 90
+.int 24
+.int 69
+.int 90
+.int 87
+.int 109
+.int 91
+.int 24
+.int 69
+.int 91
+.int 87
+.int 109
+.int 92
+.int 24
+.int 69
+.int 92
+.int 81
+.int 126
+.int 93
+.int 24
+.int 69
+.int 93
+.int 81
+.int 126
+.int 94
+.int 24
+.int 69
+.int 94
+.int 81
+.int 126
+.int 95
+.int 24
+.int 69
+.int 95
+.int 81
+.int 126
+.int 96
+.int 24
+.int 69
+.int 96
+.int 81
+.int 126
+.int 97
+.int 24
+.int 69
+.int 97
+.int 81
+.int 126
+.int 98
+.int 24
+.int 64
+.int 98
+.int 81
+.int 126
+.int 99
+.int 24
+.int 64
+.int 99
+.int 81
+.int 126
+.int 100
+.int 24
+.int 64
+.int 100
+.int 81
+.int 126
+.int 101
+.int 24
+.int 64
+.int 101
+.int 81
+.int 126
+.int 102
+.int 24
+.int 64
+.int 102
+.int 81
+.int 126
+
+.section .text
+.globl Draw32
+Draw32:
+posX .req r4
+posY .req r5
+count .req r6
+left .req r7
+right .req r8
+addr .req r9
+tempY .req r10
+push {r4,r5,r6,r7,r8,r9,r10}
+mov posX,r0
+mov posY,r1
+
+ldr addr,=Draw32Info
+ldr count,[addr]
+add addr,addr,#4
+loopDraw321$:
+
+  ldr tempY,[addr]
+  add addr,addr,#4
+  ldr left,[addr]
+  add addr,addr,#4
+  ldr right,[addr]
+  add addr,addr,#4
+  sub count,count,#3
+  
+  loopDraw322$:
+
+    push {lr}
+    mov r0,posX
+    add r0,r0,left
+    mov r1,posY
+    add r1,r1,tempY
+    bl DrawPixel
+    pop {lr}
+
+    add left,left,#1
+    cmp left,right
+    blt loopDraw322$
+
+  cmp count,#0
+  bgt loopDraw321$
+
+.unreq posX
+.unreq posY
+.unreq count
+.unreq left
+.unreq right
+.unreq addr
+.unreq tempY
+pop {r4,r5,r6,r7,r8,r9,r10}
+mov pc,lr
+

@@ -1,0 +1,396 @@
+.section .data
+.align 4
+.globl Draw16Info
+Draw16Info:
+.int 336
+.int 55
+.int 30
+.int 60
+.int 55
+.int 78
+.int 114
+.int 56
+.int 30
+.int 60
+.int 56
+.int 78
+.int 114
+.int 57
+.int 30
+.int 60
+.int 57
+.int 78
+.int 114
+.int 58
+.int 30
+.int 60
+.int 58
+.int 78
+.int 114
+.int 59
+.int 30
+.int 60
+.int 59
+.int 78
+.int 114
+.int 60
+.int 30
+.int 60
+.int 60
+.int 78
+.int 114
+.int 61
+.int 30
+.int 60
+.int 61
+.int 72
+.int 114
+.int 62
+.int 30
+.int 60
+.int 62
+.int 72
+.int 114
+.int 63
+.int 30
+.int 60
+.int 63
+.int 72
+.int 114
+.int 64
+.int 30
+.int 60
+.int 64
+.int 72
+.int 114
+.int 65
+.int 30
+.int 60
+.int 65
+.int 72
+.int 114
+.int 66
+.int 30
+.int 60
+.int 66
+.int 72
+.int 114
+.int 67
+.int 30
+.int 60
+.int 67
+.int 72
+.int 114
+.int 68
+.int 30
+.int 60
+.int 68
+.int 72
+.int 114
+.int 69
+.int 30
+.int 60
+.int 69
+.int 72
+.int 114
+.int 70
+.int 30
+.int 60
+.int 70
+.int 72
+.int 114
+.int 71
+.int 30
+.int 60
+.int 71
+.int 72
+.int 114
+.int 72
+.int 30
+.int 60
+.int 72
+.int 72
+.int 114
+.int 73
+.int 42
+.int 60
+.int 73
+.int 72
+.int 90
+.int 74
+.int 42
+.int 60
+.int 74
+.int 72
+.int 90
+.int 75
+.int 42
+.int 60
+.int 75
+.int 72
+.int 90
+.int 76
+.int 42
+.int 60
+.int 76
+.int 72
+.int 90
+.int 77
+.int 42
+.int 60
+.int 77
+.int 72
+.int 90
+.int 78
+.int 42
+.int 60
+.int 78
+.int 72
+.int 90
+.int 79
+.int 42
+.int 60
+.int 79
+.int 72
+.int 114
+.int 80
+.int 42
+.int 60
+.int 80
+.int 72
+.int 114
+.int 81
+.int 42
+.int 60
+.int 81
+.int 72
+.int 114
+.int 82
+.int 42
+.int 60
+.int 82
+.int 72
+.int 114
+.int 83
+.int 42
+.int 60
+.int 83
+.int 72
+.int 114
+.int 84
+.int 42
+.int 60
+.int 84
+.int 72
+.int 114
+.int 85
+.int 42
+.int 60
+.int 85
+.int 72
+.int 90
+.int 85
+.int 102
+.int 120
+.int 86
+.int 42
+.int 60
+.int 86
+.int 72
+.int 90
+.int 86
+.int 102
+.int 120
+.int 87
+.int 42
+.int 60
+.int 87
+.int 72
+.int 90
+.int 87
+.int 102
+.int 120
+.int 88
+.int 42
+.int 60
+.int 88
+.int 72
+.int 90
+.int 88
+.int 102
+.int 120
+.int 89
+.int 42
+.int 60
+.int 89
+.int 72
+.int 90
+.int 89
+.int 102
+.int 120
+.int 90
+.int 42
+.int 60
+.int 90
+.int 72
+.int 90
+.int 90
+.int 102
+.int 120
+.int 91
+.int 42
+.int 60
+.int 91
+.int 72
+.int 120
+.int 92
+.int 42
+.int 60
+.int 92
+.int 72
+.int 120
+.int 93
+.int 42
+.int 60
+.int 93
+.int 72
+.int 120
+.int 94
+.int 42
+.int 60
+.int 94
+.int 72
+.int 120
+.int 95
+.int 42
+.int 60
+.int 95
+.int 72
+.int 120
+.int 96
+.int 42
+.int 60
+.int 96
+.int 72
+.int 120
+.int 97
+.int 42
+.int 60
+.int 97
+.int 72
+.int 120
+.int 98
+.int 42
+.int 60
+.int 98
+.int 72
+.int 120
+.int 99
+.int 42
+.int 60
+.int 99
+.int 72
+.int 120
+.int 100
+.int 42
+.int 60
+.int 100
+.int 72
+.int 120
+.int 101
+.int 42
+.int 60
+.int 101
+.int 72
+.int 120
+.int 102
+.int 42
+.int 60
+.int 102
+.int 77
+.int 114
+.int 103
+.int 42
+.int 60
+.int 103
+.int 78
+.int 114
+.int 104
+.int 42
+.int 60
+.int 104
+.int 78
+.int 114
+.int 105
+.int 42
+.int 60
+.int 105
+.int 78
+.int 114
+.int 106
+.int 42
+.int 60
+.int 106
+.int 78
+.int 114
+.int 107
+.int 42
+.int 60
+.int 107
+.int 78
+.int 114
+
+.section .text
+.globl Draw16
+Draw16:
+posX .req r4
+posY .req r5
+count .req r6
+left .req r7
+right .req r8
+addr .req r9
+tempY .req r10
+push {r4,r5,r6,r7,r8,r9,r10}
+mov posX,r0
+mov posY,r1
+
+ldr addr,=Draw16Info
+ldr count,[addr]
+add addr,addr,#4
+loopDraw161$:
+
+  ldr tempY,[addr]
+  add addr,addr,#4
+  ldr left,[addr]
+  add addr,addr,#4
+  ldr right,[addr]
+  add addr,addr,#4
+  sub count,count,#3
+  
+  loopDraw162$:
+
+    push {lr}
+    mov r0,posX
+    add r0,r0,left
+    mov r1,posY
+    add r1,r1,tempY
+    bl DrawPixel
+    pop {lr}
+
+    add left,left,#1
+    cmp left,right
+    blt loopDraw162$
+
+  cmp count,#0
+  bgt loopDraw161$
+
+.unreq posX
+.unreq posY
+.unreq count
+.unreq left
+.unreq right
+.unreq addr
+.unreq tempY
+pop {r4,r5,r6,r7,r8,r9,r10}
+mov pc,lr
+
