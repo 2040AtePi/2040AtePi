@@ -30,14 +30,6 @@ The recommended configuration is to use a [joystick][1] coupled with two buttons
 |Enable AI Mode| 24   |
 |Reset Game    | 25   |
 
-###Hardware
-
-Connect the Raspberry Pi to an HDMI display. 
-
-Our configuration uses a [joystick][1] and two buttons for Reset and AI mode (see below). The GPIO pins used can be changed easily in `button.s`.
-
-![Circuit](http://i.imgur.com/8gTY0Cb.png =250x)
-
 ###Artificial Intelligence
 The game includes an Artificial Intelligence mode, which is toggle-able by one of the GPIO pins.
 
@@ -56,6 +48,15 @@ The AI used a randomized statistical approach to play the game. It calculates wh
   
  3. Do step 2. for Move left, Move down and Move right calculating the average score obtained for each direction.
  4. Move the original board in the direction with the highest average score. The score calculation mentioned in the algorithm is a slightly modified from the original game. In our version, when two tiles merge, we add the sum of their values to the score.
+
+###Hardware
+
+Connect the Raspberry Pi to an HDMI display. 
+
+Our configuration uses a [joystick][1] and two buttons for Reset and AI mode (see below). The GPIO pins used can be changed easily in `button.s`.
+
+![Circuit](http://i.imgur.com/8gTY0Cb.png =250x)
+
 
 ###Improvement
 There is always room for improvement. Here are some ideas:
