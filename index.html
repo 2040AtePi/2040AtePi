@@ -41,6 +41,10 @@
 <ul>
 <li>Install <a href="https://launchpad.net/gcc-arm-embedded"><code>gcc-arm-none assembler</code></a>
 </li>
+<li>Navigate to <code>src/</code>
+</li>
+<li>Add your <code>gcc-arm-none assembler</code> path in the <code>Makefile</code>
+</li>
 <li>Run <code>make</code> in your Terminal</li>
 <li>A <code>kernel.img</code> file will be generated. Replace the <code>kernel.img</code> file with it on the <code>BOOT</code> partition of the SD card of the Raspberry Pi (assuming Raspbian is installed). Make sure to backup your <code>kernel.img</code> file before. </li>
 </ul>
@@ -99,12 +103,18 @@
 
 <ol>
 <li>Save the state of the current board</li>
-<li>Move up
-a. Play random moves until the game ends
-b. Calculate the score
-c. Repeat steps 2.a. to 2.c 1000 times.
-d. Calculate the average score obtained</li>
-<li>Do step 2. for Move left, Move down and Move right calculating the average score obtained for each direction.</li>
+<li>
+<p>Move up</p>
+
+<p>a. Play random moves until the game ends</p>
+
+<p>b. Calculate the score</p>
+
+<p>c. Repeat steps 2.a. to 2.c 1000 times.</p>
+
+<p>d. Calculate the average score obtained</p>
+</li>
+<li><p>Do step 2. for Move left, Move down and Move right calculating the average score obtained for each direction.</p></li>
 <li>Move the original board in the direction with the highest average score. The score calculation mentioned in the algorithm is a slightly modified from the original game. In our version, when two tiles merge, we add the sum of their values to the score.</li>
 </ol>
 
@@ -155,7 +165,17 @@ d. Calculate the average score obtained</li>
 
     </section>
 
-  
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-65031284-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
 
