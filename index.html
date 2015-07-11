@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="2040 Ate Pi : A 2048 port for Rapsberry Pi in ARM Assembly">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>2040 Ate Pi</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/2040AtePi/2040AtePi">View on GitHub</a>
+
+          <h1 id="project_title">2040 Ate Pi</h1>
+          <h2 id="project_tagline">A 2048 port for Rapsberry Pi in ARM Assembly</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/2040AtePi/2040AtePi/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/2040AtePi/2040AtePi/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="2040-ate-pi" class="anchor" href="#2040-ate-pi" aria-hidden="true"><span class="octicon octicon-link"></span></a>2040 Ate Pi</h1>
+
+<p>2040 Ate Pi is a port of the game <strong>2048</strong> created by Gabrielle Cirulli, fully written in ARM11 Assembly for <strong>Raspberry Pi</strong>. </p>
+
+<p>It also includes a custom-built AI that can be improved. It is compatible with Revision B, and will be ported to version 2. </p>
+
+<p>Feel free to contribute!</p>
+
+<h3>
+<a id="gameplay" class="anchor" href="#gameplay" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gameplay</h3>
+
+<p>The main functionality of 2048 is implemented, with a graphical interface.</p>
+
+<p>The recommended configuration is to use a <a href="http://www.adafruit.com/products/480">joystick</a> coupled with two buttons for Reset and AI mode. See below for GPIO pin details.</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<ul>
+<li>Install <a href="https://launchpad.net/gcc-arm-embedded"><code>gcc-arm-none assembler</code></a>
+</li>
+<li>Run <code>make</code> in your Terminal</li>
+<li>A <code>kernel.img</code> file will be generated. Replace the <code>kernel.img</code> file with it on the <code>BOOT</code> partition of the SD card of the Raspberry Pi (assuming Raspbian is installed). Make sure to backup your <code>kernel.img</code> file before. </li>
+</ul>
+
+<h4>
+<a id="pins" class="anchor" href="#pins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pins</h4>
+
+<table>
+<thead>
+<tr>
+<th align="center">Button</th>
+<th align="center">Pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">↑</td>
+<td align="center">18</td>
+</tr>
+<tr>
+<td align="center">↓</td>
+<td align="center">22</td>
+</tr>
+<tr>
+<td align="center">←</td>
+<td align="center">23</td>
+</tr>
+<tr>
+<td align="center">→</td>
+<td align="center">17</td>
+</tr>
+<tr>
+<td align="center">Enable AI Mode</td>
+<td align="center">24</td>
+</tr>
+<tr>
+<td align="center">Reset Game</td>
+<td align="center">25</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="hardware" class="anchor" href="#hardware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware</h3>
+
+<p>Connect the Raspberry Pi to an HDMI display. </p>
+
+<p>Our configuration uses a <a href="http://www.adafruit.com/products/480">joystick</a> and two buttons for Reset and AI mode (see below). The GPIO pins used can be changed easily in <code>button.s</code>.</p>
+
+<h3>
+<a id="artificial-intelligence" class="anchor" href="#artificial-intelligence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Artificial Intelligence</h3>
+
+<p>The game includes an Artificial Intelligence mode, which is toggle-able by one of the GPIO pins.</p>
+
+<p>The AI used a randomized statistical approach to play the game. It calculates which way to move the board based on the following algorithm:</p>
+
+<ol>
+<li>Save the state of the current board</li>
+<li>Move up
+a. Play random moves until the game ends
+b. Calculate the score
+c. Repeat steps 2.a. to 2.c 1000 times.
+d. Calculate the average score obtained</li>
+<li>Do step 2. for Move left, Move down and Move right calculating the average score obtained for each direction.</li>
+<li>Move the original board in the direction with the highest average score. The score calculation mentioned in the algorithm is a slightly modified from the original game. In our version, when two tiles merge, we add the sum of their values to the score.</li>
+</ol>
+
+<h3>
+<a id="improvement" class="anchor" href="#improvement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Improvement</h3>
+
+<p>There is always room for improvement. Here are some ideas:</p>
+
+<ul>
+<li>Adding scoring</li>
+<li>Improving animations and User Interface</li>
+<li>Compatibility for other hardware</li>
+</ul>
+
+<h3>
+<a id="generating-tiles-from-images" class="anchor" href="#generating-tiles-from-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generating Tiles from Images</h3>
+
+<p>To generate the assembly code for displaying the numbers, use our <code>tile_generator</code>.</p>
+
+<p>All you need to do is put black and white png images in the <code>images/</code> directory and run <code>genscript.sh</code>. </p>
+
+<p>Note that the size of the images has to be 150x150 pixels and their names have to be of the form .png where number is a power of 2 between 2 and 131072.</p>
+
+<h3>
+<a id="thanks-to" class="anchor" href="#thanks-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thanks to</h3>
+
+<p>Imperial College London and Raspberry Pi for Best ARM Final Year Project Prize (Year 1)</p>
+
+<p>Cambridge University for providing a Raspberry Pi Graphics <a href="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/">tutorial</a></p>
+
+<p>Uddhav Vaghela, Paul Balaji, Amin Karamlou</p>
+
+<h3>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h3>
+
+<p>Franklin Schrans, Jacek Burys, Saurav Mitra, Srikrishna Subrahmanyam</p>
+
+<h3>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer</h3>
+
+<p>This project is protected under the <a href="LICENSE">MIT License</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">2040 Ate Pi maintained by <a href="https://github.com/2040AtePi">2040AtePi</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
