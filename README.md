@@ -14,6 +14,8 @@ The recommended configuration is to use a [joystick][1] coupled with two buttons
 
 ### Installation
 - Install [`gcc-arm-none assembler`][2]
+- Navigate to `src/`
+- Add your `gcc-arm-none assembler` path in the `Makefile`
 - Run `make` in your Terminal
 - A `kernel.img` file will be generated. Replace the `kernel.img` file with it on the `BOOT` partition of the SD card of the Raspberry Pi (assuming Raspbian is installed). Make sure to backup your `kernel.img` file before. 
 
@@ -44,9 +46,10 @@ The AI used a randomized statistical approach to play the game. It calculates wh
  1. Save the state of the current board
  2. Move up
  	a. Play random moves until the game ends
- 	b. Calculate the score
+	b. Calculate the score
   	c. Repeat steps 2.a. to 2.c 1000 times.
- 	d. Calculate the average score obtained
+  	d. Calculate the average score obtained
+  
  3. Do step 2. for Move left, Move down and Move right calculating the average score obtained for each direction.
  4. Move the original board in the direction with the highest average score. The score calculation mentioned in the algorithm is a slightly modified from the original game. In our version, when two tiles merge, we add the sum of their values to the score.
 
