@@ -14,6 +14,8 @@ The recommended configuration is to use a [joystick][1] coupled with two buttons
 
 ### Installation
 - Install [`gcc-arm-none assembler`][2]
+- Navigate to `src/`
+- Add your `gcc-arm-none assembler` path in the `Makefile`
 - Run `make` in your Terminal
 - A `kernel.img` file will be generated. Replace the `kernel.img` file with it on the `BOOT` partition of the SD card of the Raspberry Pi (assuming Raspbian is installed). Make sure to backup your `kernel.img` file before. 
 
