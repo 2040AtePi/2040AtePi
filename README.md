@@ -2,6 +2,8 @@
 
 2040 Ate Pi is a port of the game **2048** created by Gabrielle Cirulli, fully written in ARM11 Assembly for **Raspberry Pi**. 
 
+Introduction video: https://www.youtube.com/watch?v=PBAbCmfxmuY
+
 It also includes a custom-built AI that can be improved. It is compatible with Revision B, and will be ported to version 2. 
 
 Feel free to contribute!
